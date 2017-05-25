@@ -1,0 +1,25 @@
+Processionsgrupp
+    Om möjligt, så ska grupperna inte innehålla flera skolor.
+    Om en skola > 22 personer, så får den (helst inte) blandas med andra skolor i processionsgruppen
+
+Antalet grupper begränsas av marskalkar
+
+
+Placeringen
+    Ordningen på alla personer är helt fix. Bestämms av till programmet listan
+    Problemet är att dela ut tomma platser
+    om platser är tomma, så är de alltid längst ut mot mittgången
+
+För varje processionsgrupp
+    så måste det bestämmas om de går in från vänster eller höger
+
+ordningen i en processionsgrupp är implicit bestämd av placering
+
+processionsgrupper som innehåller personer till rad 1, måste gå in från vänster
+
+
+
+
+när folk går upp på podiet
+    så tas alltid hela rader ut
+
