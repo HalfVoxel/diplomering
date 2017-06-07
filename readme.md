@@ -15,8 +15,8 @@ Detta program kan köras på unix-liknande system (t.ex Linux eller macOS).
 Det kräver en terminal som stödjer 24-bitars färger, men det gör de flesta moderna terminaler.
 
 ~~~
-git clone (this repository)
-cd (new folder)
+git clone git@github.com:HalfVoxel/diplomering.git
+cd diplomering
 ./run.sh examples/2017-05-31
 ~~~
 
