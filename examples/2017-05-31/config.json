@@ -1,0 +1,13 @@
+{
+	"rows": 12,
+	"columns": 22,
+	"reservedSeats": 5,
+	"groups": 9,
+	"weights": [
+		{
+			"program": 0.0089,
+			"school": 1.7,
+			"size": 37
+		}
+	]
+}
