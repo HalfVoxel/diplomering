@@ -66,5 +66,5 @@ Förnamn<tab>Efternamn
 ...
 ~~~
 
-Notera att innan en ny skola så är det 2 tomma rader och innan ett nytt program så är det 1 ny skola.
+Notera att innan en ny skola så är det 2 tomma rader och innan ett nytt program så är det 1 ny rad.
 `<tab>` är alltså tab-symbolen, inte ett mellanslag eller något annat.
