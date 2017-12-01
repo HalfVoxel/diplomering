@@ -29,6 +29,7 @@ struct WeightConfig {
 	double programWeight = 1;
 	double schoolWeight = 1;
 	double sizeWeight = 1;
+	double orderWeight = 1;
 
 	// Best score so far for this configuration of weights
 	// Note that we are trying to minimize this score
@@ -79,7 +80,6 @@ struct Solver {
 	double sizeWeightScale = 1.35;
 	double orderWeightScale = 2000;
 
-	double orderWeight = 1;
 	int numProcessionGroups;
 
 	vector<Color> colors = {{31,120,180},{51,160,44},{53,88,237},{218,0,37},{106,61,154},{218,149,0}};
@@ -116,6 +116,7 @@ struct Solver {
 			cin >> w.programWeight;
 			cin >> w.schoolWeight;
 			cin >> w.sizeWeight;
+			cin >> w.orderWeight;
 		}
 
 		int schools, programs;
@@ -594,7 +595,7 @@ struct Solver {
 			anyWorked = sideCalculator.bestScore != INF;
 
 			side = vector<bool>(processionGroups.size());
-			orderScore = sideCalculator.bestScore * orderWeight * orderWeightScale;
+			orderScore = sideCalculator.bestScore;
 			for(int i = 0; i < (int)processionGroups.size(); i++) {
 				bool rightSide = ((sideCalculator.bestSides >> i) & 0x1) != 0;
 				side[i] = rightSide;
@@ -616,7 +617,7 @@ struct Solver {
 			auto finalProgramScore = programScore * w.programWeight * programWeightScale;
 			auto finalSchoolScore = schoolScore * w.schoolWeight * schoolWeightScale;
 			auto finalSizeScore = sizeScore * w.sizeWeight * sizeWeightScale;
-			auto finalOrderScore = orderScore;
+			auto finalOrderScore = orderScore * w.orderWeight * orderWeightScale;
 			double score = finalProgramScore + finalSchoolScore + finalSizeScore + finalOrderScore + emptySeatScore;
 
 			if (score < w.bestScore) {

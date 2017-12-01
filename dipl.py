@@ -89,6 +89,7 @@ for weight in config["weights"]:
     print(weight["program"], file=f1)
     print(weight["school"], file=f1)
     print(weight["size"], file=f1)
+    print(weight["order"] if "order" in weight else 1, file=f1)
 
 print(str(len(schools)), file=f1)
 print(str(len(programs)), file=f1)

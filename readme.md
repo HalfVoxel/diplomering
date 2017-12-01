@@ -20,6 +20,17 @@ cd diplomering
 ./run.sh examples/2017-05-31
 ~~~
 
+Skapa ny mapp
+~~~
+mkdir 2017
+cd 2017
+# Kopiera config filen från exempeldatan
+cp ../examples/2017-05-31/config.json
+# Skapa input.txt... (visas inte här)
+cd ..
+./run.sh 2017
+~~~
+
 Input
 -----
 Programmet tar en sökväg till en mapp som input. Denna mapp ska innehålla 2 filer.
@@ -37,6 +48,7 @@ En JSON fil med diverse inställningar.
 			"program": 0.0089,  <- Hur dåligt det är att en processionsgrupp innehåller flera olika program
 			"school": 1.7,      <- Hur dåligt det är att en processionsgrupp innehåller flera olika skolor
 			"size": 37          <- Hur dåligt det är att processionsgrupperna är stora
+			"order": 1          <- Hur dåligt det är att efterföljande grupper går in från samma håll
 		}
 	]
 }
@@ -56,7 +68,6 @@ Namn på program
 Förnamn<tab>Efternamn
 ...
 
-
 Namn på skola
 
 Namn på program
@@ -66,5 +77,5 @@ Förnamn<tab>Efternamn
 ...
 ~~~
 
-Notera att innan en ny skola så är det 2 tomma rader och innan ett nytt program så är det 1 ny rad.
+Notera att en ny skola står på en helt egen rad med 1 tom rad över och under sig, innan ett nytt program så är det 1 tom rad och sedan följer alla namn i det programmet.
 `<tab>` är alltså tab-symbolen, inte ett mellanslag eller något annat.
