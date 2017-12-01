@@ -79,3 +79,8 @@ Förnamn<tab>Efternamn
 
 Notera att en ny skola står på en helt egen rad med 1 tom rad över och under sig, innan ett nytt program så är det 1 tom rad och sedan följer alla namn i det programmet.
 `<tab>` är alltså tab-symbolen, inte ett mellanslag eller något annat.
+
+Tid
+---
+Hur lång tid programmet tar att köra beror till största delen på hur många lediga platser det finns. Fler tomma platser tar avsevärt mycket längre tid.
+En sak som man kan göra om programmet tar för lång tid att köra är att reducera antalet kolumner med 1, och reducera antalet reserverade platser med 1 vilket i princip är samma sak som att reservera platsen längst till höger på alla rader.
