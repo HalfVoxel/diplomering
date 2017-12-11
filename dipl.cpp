@@ -45,7 +45,7 @@ struct Color {
     int r, g, b;
 
     void print() {
-		cerr << "\x1b[" << 48 << ";2;" << r << ";" << g << ";" << b << "m";	    	
+		cerr << "\x1b[" << 48 << ";2;" << r << ";" << g << ";" << b << "m";
     }
 };
 
@@ -386,6 +386,7 @@ struct Solver {
 				}
 
 				if (groupSide[i]) reverse(currentCol.begin(), currentCol.end());
+				cout << row << " ";
 				for (auto c : currentCol) cout << c << " ";
 				cout << endl;
 			}
@@ -481,7 +482,7 @@ struct Solver {
 
 			auto& group = processionGroups[index];
 			if(group.mustBeLeft && group.mustBeRight) return;
-			
+
 			// Try both left and right
 			// For index=0 this will just be 0
 			int side = (sides >> (index - 1)) & 0x1;
@@ -562,7 +563,7 @@ struct Solver {
 					//int numSameSide = __builtin_popcount((order ^ (~order >> 1)) & (bound/2 - 1));
 					// This is the equivalent code of the bit-hack above
 					// It just checks how many groups enter from the same side as the group after it
-					
+
 					int numSameSide = 0;
 					for(int i = 0; i < (int)processionGroups.size() - 1; i++) {
 						bool rightSide1 = ((order >> i) & 0x1) != 0;

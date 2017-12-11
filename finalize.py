@@ -32,8 +32,15 @@ while True:
     groupSize = int(line[3])
     remaining = groupSize
     print("Group " + str(groupNumber) + " (enters from the " + ("right" if side else "left") + ")")
+    prevRow = -1
     while remaining > 0:
         nums = [int(x) for x in sys.stdin.readline().strip().split()]
+        row = nums[0]
+        if prevRow != -1 and row != prevRow:
+            print("-----")
+
+        prevRow = row
+        nums = nums[1:]
         remaining -= len(nums)
         names = [persons[num].ljust(longestName) for num in nums]
         print(" ".join(names))
