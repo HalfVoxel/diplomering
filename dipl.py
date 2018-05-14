@@ -17,8 +17,9 @@ output1 = []
 output2 = []
 
 if len(sys.argv) != 4 or "" in sys.argv:
-    print("Usage: ./run.sh input-directory input")
-    print(" input-directory: path to the input directory which should contain a config.json file and an input.txt file")
+    print("Usage: ./run.sh input-directory [output1] [output2]")
+    print(" input-directory: path to the input directory which should contain a config.json file and an input.txt file.")
+    print("See readme.md for more detailed instructions.")
     exit(1)
 
 config = json.loads(open(os.path.join(sys.argv[1], "config.json")).read())
