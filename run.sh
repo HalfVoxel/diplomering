@@ -4,7 +4,7 @@ set -e
 # Create 2 temporary files
 brief="$(mktemp -t brf)"
 detailed="$(mktemp -t det)"
-# Take the input (from stdin) and write 2 files with different subsets of the information
+# Take the input (from the file given by the first parameter) and write 2 files with different subsets of the information
 # (because it is annoying to have to parse a lot of information in c++ that isn't used by that program)
 python3 dipl.py $1 $brief $detailed
 # Compile the c++ program
