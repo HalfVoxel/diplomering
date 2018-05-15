@@ -34,6 +34,7 @@ def getline():
     return line
 
 
+print("Reading input.txt")
 while True:
     line = getline()
     if line is None:
@@ -78,6 +79,9 @@ while True:
 
     print("Could not parse line '" + line + "' in input file")
     exit(1)
+
+
+print("Found " + str(len(programs)) + " programs in the input file as well as " + str(len(output1)) + " students")
 
 f1 = open(sys.argv[2], "w")
 f2 = open(sys.argv[3], "w")
